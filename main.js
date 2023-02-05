@@ -17,9 +17,19 @@ let pswIngresada=prompt ("Ingrese su contraseña:");
 /* Validamos */
 if (usuarioIngresado===usuarioAutorizado && pswIngresada===pswAutorizada){
     alert ("Bienvenido " + usuarioIngresado);
+    evaluarNumero(numeroOculto);
+} else {
+    alert ("Usuario y/o contraseña incorrecta");
+}
+
+
+
+
+/* Funcion */
+function evaluarNumero (numeroOculto){
     while (true){
         let numUsuario=prompt("Ingresa un número para adivinar el mágico: ");
-        if (numUsuario===numeroOculto){
+        if (numUsuario==numeroOculto){
             alert ("Felicitaciones " + usuarioIngresado + " has adivinado el número mágico");
             break;
         }else if (numUsuario==0){
@@ -30,7 +40,5 @@ if (usuarioIngresado===usuarioAutorizado && pswIngresada===pswAutorizada){
         }else if(numUsuario > numeroOculto){
             alert ("El número ingresado es mayor al mágico, seguí intentando")
         }
-    }
-} else {
-    alert ("Usuario y/o contraseña incorrecta");
+    }    
 }
